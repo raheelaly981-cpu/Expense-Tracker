@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>💰 Finance Dashboard</h1>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Add Transaction</h3>
+        <input type="text" id="title" placeholder="Title">
+        <input type="number" id="amount" placeholder="Amount (+income / -expense)">
+        <button onclick="addTransaction()">Add</button>
+      </div>
+
+      <div class="card summary">
+        <h3>Balance: <span id="balance">0</span></h3>
+        <h3>Income: <span id="income">0</span></h3>
+        <h3>Expense: <span id="expense">0</span></h3>
+      </div>
+
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Transactions</h3>
+        <ul id="list"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Income vs Expense</h3>
+        <canvas id="chart"></canvas>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
